@@ -18,12 +18,12 @@ If you want to "include" Calendar items, then remove it from the list.
 ~~~
 "excludeFolders" = @("In-Place archive","Recoverable Items")
 ~~~
-Download the script
+# Download the script
 Run these commands from PowerShell to download the script(s) into your current directory
 
 ~~~
 # Download Commands
-$scriptName = 'ModifyProtectedM365Mailboxes' 
+$scriptName = 'ModifyProtectedDMaaSM365Mailboxes' 
 $repoURL = "https://raw.githubusercontent.com/danfrankenstein/$scriptName/main" 
 (Invoke-WebRequest -UseBasicParsing -Uri "$repoUrl/$scriptName.ps1").content | Out-File "$scriptName.ps1"; (Get-Content "$scriptName.ps1") | Set-Content "$scriptName.ps1" 
 (Invoke-WebRequest -UseBasicParsing -Uri "$repoUrl/cohesity-api.ps1").content | Out-File cohesity-api.ps1; (Get-Content cohesity-api.ps1) | Set-Content cohesity-api.ps1
@@ -31,8 +31,8 @@ $repoURL = "https://raw.githubusercontent.com/danfrankenstein/$scriptName/main"
 ~~~
 
 # Components
-*protectDmaasM365Mailboxes.ps1: the main powershell script
-*cohesity-api.ps1: the Cohesity REST API helper module
+- protectDmaasM365Mailboxes.ps1: the main powershell script
+ -cohesity-api.ps1: the Cohesity REST API helper module
 Place both files in a folder together and run the main script like so:
 ~~~
 ./unprotectDmaasM365Mailboxes.ps1 -region us-east-2 `
