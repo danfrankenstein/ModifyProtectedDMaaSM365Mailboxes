@@ -24,9 +24,10 @@ Run these commands from PowerShell to download the script(s) into your current d
 ~~~
 # Download Commands
 $scriptName = 'ModifyProtectedM365Mailboxes' 
-$repoURL = 'https://raw.githubusercontent.com/danfrankenstein/$scriptName/main' 
+$repoURL = "https://raw.githubusercontent.com/danfrankenstein/$scriptName/main" 
 (Invoke-WebRequest -UseBasicParsing -Uri "$repoUrl/$scriptName.ps1").content | Out-File "$scriptName.ps1"; (Get-Content "$scriptName.ps1") | Set-Content "$scriptName.ps1" 
 (Invoke-WebRequest -UseBasicParsing -Uri "$repoUrl/cohesity-api.ps1").content | Out-File cohesity-api.ps1; (Get-Content cohesity-api.ps1) | Set-Content cohesity-api.ps1
+
 # End Download Commands
 ~~~
 
