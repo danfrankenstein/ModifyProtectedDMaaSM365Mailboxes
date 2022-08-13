@@ -9,9 +9,13 @@ If you want to include all Items, adjust the line to an empty array
 ~~~
 "excludeFolders" = @()
 ~~~
-If you want to "include" Calendar items, then remove it from the list.
+If you want to "Exclude" Calendar, Archive and Recycle bin items, then add them to the array list.
 ~~~
 "excludeFolders" = @("Calendar","In-Place archive","Recoverable Items")
+~~~
+If you want to "include" Calendar items, then remove it from the list.
+~~~
+"excludeFolders" = @("In-Place archive","Recoverable Items")
 ~~~
 Download the script
 Run these commands from PowerShell to download the script(s) into your current directory
