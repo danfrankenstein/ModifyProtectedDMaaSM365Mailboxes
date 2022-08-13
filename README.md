@@ -3,7 +3,8 @@ Warning: this code is provided on a best effort basis and is not in any way offi
 
 This powershell script removes protection for DMaaS M365 Mailboxes and them reprotects using the parameters specified. This script was created for the purpose of automating changes to a large nubmer of Manually Protected Mailboxes. 
 
-In the body of the script, you can specify exclude folders by adjusting the parameters on line 183 
+In the body of the script, you can specify exclude folders by adjusting the parameters on line 183
+ 
 If you want to include all Items, adjust the line to an empty array 
 - ie: 
 ~~~
