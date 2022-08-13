@@ -1,8 +1,18 @@
-# Unprotect DMaaS M365 Mailboxes using PowerShell
+# Modifying DMaaS M365 Mailboxes using PowerShell
 Warning: this code is provided on a best effort basis and is not in any way officially supported or sanctioned by Cohesity. The code is intentionally kept simple to retain value as example code. The code in this repository is provided as-is and the author accepts no liability for damages resulting from its use.
 
-This powershell script removes protection for DMaaS M365 Mailboxes. This script was created for the purpose of automating the offboarding of M365 users. 
+This powershell script removes protection for DMaaS M365 Mailboxes and them reprotects using the parameters specified. This script was created for the purpose of automating changes to a large nubmer of Manually Protected Mailboxes. 
 
+In the body of the script, you can specify exclude folders by adjusting the parameters on line 183 
+If you want to include all Items, adjust the line to an empty array 
+- ie: 
+~~~
+"excludeFolders" = @()
+~~~
+If you want to "include" Calendar items, then remove it from the list.
+~~~
+"excludeFolders" = @("Calendar","In-Place archive","Recoverable Items")
+~~~
 Download the script
 Run these commands from PowerShell to download the script(s) into your current directory
 
