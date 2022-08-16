@@ -1,7 +1,7 @@
 # process commandline arguments
 [CmdletBinding()]
 param (
-    [Parameter()][string]$username = 'DMaaS',
+    [Parameter()][string]$username = 'DMaaS', # Username used to log into Helios
     [Parameter(Mandatory = $True)][string]$region,  # DMaaS region
     [Parameter(Mandatory = $True)][string]$policyName = '',  # protection policy name
     [Parameter(Mandatory = $True)][string]$sourceName,  # name of registered O365 source
