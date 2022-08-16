@@ -122,7 +122,7 @@ foreach ($Sourceobject in $mailboxesToAdd)
         #$unprotectResponse | out-file -filepath .\$outfileName -Append
         Write-Host "Unprotected $unprotectItem"
     }
-    Else {"Unable to Finde $unprotectItem in order to unprotect prior to assigning new Protection configuration." }
+    Else {"Unable to Find $unprotectItem in order to unprotect prior to assigning new Protection configuration." }
    }
 
 
